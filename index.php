@@ -380,8 +380,8 @@
                             <p class="nav-link p-0 text-dark"><h5><?php echo $_SESSION['name'] ?> <?php echo $_SESSION['firstname'] ?></h5></p>
                         </div>
                         <div class="col-1 offset-10 mt-2">
-                            <form action=""></form>
-                                <button type="submit" class="nav-link p-0 text-white form-control btn btn-dark border-dark text-center">Se déconnecter</button>
+                            <form action="logout.php">
+                                <button type="submit" class="text-white form-control btn btn-dark border-dark text-center">Se déconnecter</button>
                             </form>
                         </div>
                     <?php
