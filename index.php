@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -367,6 +370,33 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-compte" role="tabpanel" aria-labelledby="nav-compte-tab">
+                    <?php
+                    if (isset($_SESSION['name'])) {
+                    ?>
+                        <div class="col-2 offset-10 mt-2">
+                            <p class="nav-link p-0 text-dark"><h5><?php echo $_SESSION['name'] ?> <?php echo $_SESSION['firstname'] ?></h5></p>
+                        </div>
+                        <div class="col-1 offset-10 mt-2">
+                            <form action=""></form>
+                                <button type="submit" class="nav-link p-0 text-white form-control btn btn-dark border-dark text-center">Se déconnecter</button>
+                            </form>
+                        </div>
+                    <?php
+                    }
+                    else {
+                    ?>
+                        <div class="col-2 offset-10 mt-2">
+                            <a class="nav-link p-0 text-dark" href="connect-account.php"><h5>Se connecter</h5></a>
+                        </div>
+                        <div class="col-2 offset-10 mt-2">
+                            <a class="nav-link p-0 text-dark" href="create-account.php"><h5>Créer un compte</h5></a>
+                        </div>
+                    <?php
+                    }
+                    ?>
                     </div>
                 </div>
             </div>
