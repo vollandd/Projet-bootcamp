@@ -25,7 +25,7 @@
                 session_start ();
                 $_SESSION['email'] = $_POST['email'];
                 $_SESSION['password'] = $_POST['password'];
-                header('location: page-admin.php');
+                header('location: dashboard-admin.php');
             }
             elseif ($login_valide == $_POST['email'] && $pwd_valide == $_POST['password']) {
                 

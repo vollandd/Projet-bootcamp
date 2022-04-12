@@ -1,0 +1,6 @@
+.vertical-line{
+    border-left: 2px solid #000;
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+}
