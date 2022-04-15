@@ -31,6 +31,11 @@
     <form action="action-edit-stock.php?id=<?php echo $id ?>" method="post">
 
     <div class="col-2 offset-5 mt-5">
+        <label for="type">Libelle produit</label>
+        <input type="text" class="form-control border-dark text-center" value="<?php echo $stock->getType() ?>" name="type">
+    </div>
+
+    <div class="col-2 offset-5 mt-3">
             <?php 
             if(isset($_SESSION['keep_name'])) 
             { 

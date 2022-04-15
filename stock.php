@@ -2,19 +2,31 @@
 
 class Stock {
 
+    public String $type;
     public String $name;
     public String $supplier;
     public Float $buying_price;
     public Float $selling_price;
     public Int $quantity_stock;
 
-    public function __construct($name, $supplier, $buying_price, $selling_price, $quantity_stock)
+    public function __construct($type, $name, $supplier, $buying_price, $selling_price, $quantity_stock)
     {
+        $this->type = $type;
         $this->name = $name;
         $this->supplier = $supplier;
         $this->buying_price = $buying_price;
         $this->selling_price = $selling_price;
         $this->quantity_stock = $quantity_stock;
+    }
+
+    public function setType(String $type): Void 
+    {
+        $this->type = $type;
+    }
+
+    public function getType(): String 
+    {
+        return $this->type;
     }
 
     public function setName(String $name): Void 

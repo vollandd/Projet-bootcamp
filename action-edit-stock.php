@@ -10,10 +10,11 @@ $buying_price = $_POST['buying_price'];
 $selling_price = $_POST['selling_price'];
 $supplier = $_POST['supplier'];
 $quantity_stock = $_POST['quantity_stock'];
+$type = $_POST['type'];
 
 $_SESSION['error'] = array();
 
-if (!preg_match("/^[a-zA-Z0-9]*$/",$name))
+if (!preg_match("/^[a-zA-Z0-9-' ]*$/",$name))
 {
     $_SESSION['name'] = "seulement les lettres minuscules, majuscules et les chiffres sont autorisé dans le champ : Libelle produit";
     $_SESSION['error'][0] = $_SESSION['name'];
@@ -31,7 +32,7 @@ if (!preg_match("/^[+-]?([0-9]*[.])?[0-9]*$/",$selling_price))
     $_SESSION['error'][2] = $_SESSION['selling_price'];
 }
 
-if (!preg_match("/^[a-zA-Z0-9]*$/",$supplier))
+if (!preg_match("/^[a-zA-Z0-9-' ]*$/",$supplier))
 {
     $_SESSION['supplier'] = "seulement les lettres minuscules, majuscules et les chiffres sont autorisé dans le champ : Fournisseur";
     $_SESSION['error'][3] = $_SESSION['supplier'];
@@ -75,7 +76,7 @@ if (empty($quantity_stock))
 
 if (empty($_SESSION['error']))
 {
-    $stock = New Stock("$name", "$supplier", "$buying_price", "$selling_price", "$quantity_stock");
+    $stock = New Stock("$type", "$name", "$supplier", "$buying_price", "$selling_price", "$quantity_stock");
 
     require 'function-update-data-stock.php';
 

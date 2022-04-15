@@ -35,7 +35,7 @@
                     </div>
                     <div class="row">
                         <div class="col-5 mb-4 offset-2">
-                            <a class="text-white text-decoration-none"href="stock_visualization.php"><button type="submit" class="form-control btn btn-secondary border-dark" name="annuler">ANNULER</button></a>
+                            <a class="text-white text-decoration-none"href="stock-visualization.php"><button type="submit" class="form-control btn btn-secondary border-dark" name="annuler">ANNULER</button></a>
                         </div>
 
                     

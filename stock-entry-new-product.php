@@ -23,6 +23,32 @@
     <form action="action-stock-entry-new-product.php" method="post">
 
     <div class="col-2 offset-5 mt-5">
+        <select class="form-select border-dark" aria-label="Default select example" name="type">
+            <option value="empty" selected>Selectioner un type de produit</option>
+            <option value="ski-alpin">Ski alpin</option>
+            <option value="ski-de-fond">Ski de fond</option>
+            <option value="ski-de-randonne">Ski de randonne</option>
+            <option value="snowboard">Snowboard</option>
+            <option value="splitboard">Splitboard</option>
+            <option value="fixation-ski-alpin">Fixation ski alpin</option>
+            <option value="fixation-ski-de-fond">Fixation ski de fond</option>
+            <option value="fixation-ski-de-randonne">Fixation ski de randonne</option>
+            <option value="fixation-snowboard">Fixation snowboard</option>
+            <option value="chaussure-ski-alpin">Chaussure ski alpin</option>
+            <option value="chaussure-ski-de-fond">Chaussure ski de fond</option>
+            <option value="chaussure-ski-de-randonne">Chaussure ski de randonne</option>
+            <option value="boots-snowboard">Boots snowboard</option>
+            <option value="baton-ski-alpin">Baton ski alpin</option>
+            <option value="baton-ski-de-fond">Baton ski de fond</option>
+            <option value="baton-ski-de-randonne">Baton ski de randonne</option>
+            <option value="vetement">Vetement</option>
+            <option value="vetement-chauffant">Vetement chauffant</option>
+            <option value="accessoire-textile">Accessoire textile</option>
+            <option value="protection">Protection</option>
+        </select>
+    </div>
+
+    <div class="col-2 offset-5 mt-3">
             <?php 
             if(isset($_SESSION['keep_name'])) 
             { 
